@@ -24,7 +24,9 @@ Developed and maintained by @PatrickLemke
 """
 
 HELP_STRINGS = """
-Please contact @PatrickLemke for help with this bot
+You can click through the menu to explore possible settings and options
+
+Please feel free to reach out to one of the admins if you have any questions
 """
 
 IMPORTED = {}
@@ -117,7 +119,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
-        update.effective_message.reply_text("Yo, whadup?")
+        update.effective_message.reply_text("This command is only useful if you talk to me in private")
 
 
 # for test purposes
