@@ -1,4 +1,5 @@
 from tg_bot import dispatcher
+from telegram import Update, Bot
 
 ### Replies with the information message which questions are being answered and how to hire a programmer
 def display_lop(bot: Bot, update: Update):
