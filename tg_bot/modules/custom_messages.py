@@ -1,6 +1,7 @@
 from tg_bot import dispatcher
 
-def display_lor(bot: Bot, update: Update):
+### Replies with the information message which questions are being answered and how to hire a programmer
+def display_lop(bot: Bot, update: Update):
 	user = update.effective_user
 	chat_id = update.effective_chat.id
 	try:
@@ -26,13 +27,13 @@ def display_lor(bot: Bot, update: Update):
 			
 
 __help__ = """
- - /learnorpay or /lor Display the information message which questions are being answered and how to hire a programmer.
+ - /learnorpay or /lop Display the information message which questions are being answered and how to hire a programmer.
 """
 
-__mod_name__ = "Telegram Bots Community Custom Messages"
+__mod_name__ = "TBC Custom Messages"
 
-LEARNORPAY_HANDLER = CommandHandler("learnorpay", display_lor, filters=Filters.group)
-LOR_HANDLER = CommandHandler("lor", display_lor, filters=Filters.group)
+LEARNORPAY_HANDLER = CommandHandler("learnorpay", display_lop, filters=Filters.group)
+LOP_HANDLER = CommandHandler("lop", display_lop, filters=Filters.group)
 
 dispatcher.add_handler(LEARNORPAY_HANDLER)
-dispatcher.add_handler(LOR_HANDLER)
+dispatcher.add_handler(LOP_HANDLER)
