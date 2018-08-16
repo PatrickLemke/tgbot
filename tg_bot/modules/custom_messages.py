@@ -1,17 +1,12 @@
 from tg_bot import dispatcher
 from telegram import Update, Bot
+from telegram.ext import CommandHandler, run_async, Filters
 
 ### Replies with the information message which questions are being answered and how to hire a programmer
 def display_lop(bot: Bot, update: Update):
 	user = update.effective_user
 	chat_id = update.effective_chat.id
-	try:
-        chat = bot.get_chat(chat_id)
-    except BadRequest as excp:
-		if excp.message == "Chat not found" :
-			bot.send_message(user.id, "Chat not found")
-		else:
-			raise
+	
 	text = """
 	Dear Community Member, we are willing to help you on all specific questions related to Telegram bots and programming of those.
 	Though you need to know how to program. If you need some help on how to get started to program a bot, check our /links .
