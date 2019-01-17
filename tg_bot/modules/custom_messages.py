@@ -31,7 +31,7 @@ def say(bot:Bot, update: Update):
 	message_id = update.effective_message.message_id
 	message = update.effective_message.text
 	bot.deleteMessage(chat.id,message_id)
-	bot.sendMessage(chat.id,message)
+	bot.sendMessage(chat.id,message[4:])
 
 __help__ = """
  - /learnorpay or /lop Display the information message which questions are being answered and how to hire a programmer.
